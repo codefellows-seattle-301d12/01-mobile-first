@@ -10,13 +10,15 @@
 }
 
 .icon-menu {
-  /* TODO: Add styles for the icon-menu class (whether it be the
-      hamburger font icon or an image of your choosing). It should be
-      bigger, and off to the right. */
+      float: right;
+      width: 100px;
+      margin-top: 50px;
+      margin-right: 20px;
 }
 
 .main-nav {
   padding: 0.1em;
+  width: 100%;
 }
 
 .main-nav ul {
@@ -58,11 +60,31 @@
   text-decoration: none;
 }
 
-/* TODO: Now add styles for how things should look on a larger screen,
-   (hint: min is in!):
-@media screen...
-         - Hide the hamburger.
-         - Display our unordered list (aka our nav links).
-         - The main-nav should be all on one row, with padding spaced better
-           for a larger screen.
-*/
+
+@media only screen and (min-width: 640px) {
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .icon-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .main-nav ul {
+    display: block;
+  }
+
+  .main-nav li {
+    display: inline;
+    text-align: center;
+    padding: 1em;
+    border: none;
+  }
+
+  .main-nav li:last-child {
+    margin-left: none;
+  }
+
+}
